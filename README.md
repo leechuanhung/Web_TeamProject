@@ -8,4 +8,6 @@
 
 <br>
 
-최찬영 : 
+최찬영 : 자바스크립트 게임 참고
+
+https://mozdevs.github.io/html5-games-workshop/platformer/
