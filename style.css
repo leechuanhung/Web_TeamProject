@@ -1,0 +1,63 @@
+:root {
+    --color-base: #E0EAF5;
+    --color-blue: #2E77AE;
+    --color-font: #0d2137;
+    --color-point: #FF8E2B;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-font);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: var(--color-base);
+    border-bottom: 1px solid var(--color-font);
+}
+
+header h1 {
+    margin: 5px;
+    padding: 5px;
+}
+
+nav {
+    margin: 20px;
+    padding: 20px;
+}
+
+nav ul {
+
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 20px;
+    width: auto;
+    display: inline-block;
+    color: var(--color-font);
+
+    transition: color 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+    color: var(--color-blue);
+    transform: scale(1.05);
+}
+
+figure {
+    display: none;
+}
