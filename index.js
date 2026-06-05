@@ -10,3 +10,16 @@ const header = document.querySelector("header");
       header.classList.remove("scrolled");
     }
     });
+
+// 마커 클릭
+const marker = document.querySelector(".map-marker");
+const close = document.querySelector("#close-details");
+const details = document.querySelector(".details");
+
+marker.addEventListener("click", () => {
+  details.style.display = "block";
+});
+
+close.addEventListener("click", () => {
+  details.style.display = "none";
+});
