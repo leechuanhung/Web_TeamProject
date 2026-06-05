@@ -14,16 +14,15 @@ https://mozdevs.github.io/html5-games-workshop/platformer/
 
 헤더 코드 수정했고 해당 주석 봐주세요. css 삭제는 안하고 추가만 했습니다.
 
-팀원소개 페이지에서 아래 부분을 그대로 사람마다 넣으면 될거 같아요
+팀원소개 페이지에서 아래 부분을 가져가서 알맞게 수정하면 될거 같아요
 
 ```html
 <div class="explain">
-
       <img class="explain-koomin" src="./images/쿠민1.png">
 
       <div class="explain-text">
-        <h2>국민대 편의시설을 한눈에!</h2>
-        <p>장소 추가 또는 건의사항이 있다면 문의해주세요</p>
+            <h2>국민대 편의시설을 한눈에!</h2>
+            <p>장소 추가 또는 건의사항이 있다면 문의해주세요</p>
       </div>
-    </div>
+</div>
 ```
