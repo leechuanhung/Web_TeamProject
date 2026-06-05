@@ -16,20 +16,38 @@ body {
   font-weight: 400;
   font-style: normal;
   color: var(--color-font);
+
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* 이 부분 수정함 */
+    background-image: url(./images/헤더이미지.jpg);
+    background-size: cover;
+    background-position: 68% 12%;
+    position: sticky;
+    top: 0;
+    height: 200px;
+    padding: 30px;
+    transition: height 0.2s ease, padding 0.2s ease, background-position 0.2s ease;
     
     background-color: var(--color-base);
     border-bottom: 1px solid var(--color-font);
 }
 
-header h1 {
+/* 스크롤시 헤더 작아지는거 */
+header.scrolled {
+    height: 64px;
+    background-position: 68% 10%;
+}
+
+header nav{
     margin: 5px;
     padding: 5px;
+    color: white !important;
 }
 
 nav {
@@ -48,8 +66,8 @@ nav a {
     font-size: 20px;
     width: auto;
     display: inline-block;
-    color: var(--color-font);
-
+    color: white; /* 글씨가 잘 안보여서 하얀색으로.*/
+    text-decoration: none; /* 하이퍼링크 밑줄 쳐지는거 방지 */
     transition: color 0.2s, transform 0.2s;
 }
 
@@ -61,3 +79,47 @@ nav a:hover {
 figure {
     display: none;
 }
+
+/* 지도 클래스 */
+.map {
+    display: block;
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto 0;
+}
+
+
+/* -----------------쿠민이와 텍스트 부분 --------------------------*/
+.explain {
+    max-width: 1000px;
+    margin: 220px auto 100px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.explain-koomin {
+    width: 180px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.explain-text h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--color-point);
+    margin-bottom: 18px;
+}
+
+.explain-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--color-font);
+}
+/*---------------------------------------------------------------------------*/
+
