@@ -18,7 +18,7 @@ https://mozdevs.github.io/html5-games-workshop/platformer/
 
 ```html
 <div class="explain">
-      <img class="explain-koomin" src="./images/쿠민1.png">
+      <img class="explain-img" src="./images/쿠민1.png">
 
       <div class="explain-text">
             <h2>국민대 편의시설을 한눈에!</h2>
