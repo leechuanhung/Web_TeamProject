@@ -45,69 +45,48 @@
 
 
     <!-- 지도 -->
-    <section>
+    <section class="map-section">
 
-      <!-- 지도 이미지 -->
-      <img class="map" src="./images/map.png" alt="캠퍼스 지도" style="background-size: cover;">
+      <div class="map-elements">
+        <!-- 지도 이미지 -->
+        <img class="map" src="./images/map.png" alt="캠퍼스 지도">
 
-      <!-- 마커 -->
-      <button type="button">
-        <!-- <img src="" alt="미래관 마커"> -->
-      </button>
+        <!-- 마커 -->
+        <button class="map-marker" type="button">
+          <img src="./images/map_marker.png" alt="마커">
+        </button>
+      </div>
 
-      <!-- 마커 클릭 시 열릴 장소/편의시설 정보 창 -->
-      <aside>
+      <!-- 마커 클릭 후 미래관 -->
+      <aside class="details">
 
-        <div>
-          <h3>미래관</h3>
-          <button type="button">닫기</button>
-        </div>
+      <div class="details-header">
+        <h3>미래관</h3>
+        <button id="close-details" type="button">X</button>
+      </div>
 
-        <figure>
-            <!-- <img src="" alt="미래관 사진"> -->
-        </figure>
+      <div class="details-body">
 
-        <hr>
+        <article class="place">
+          <h4>자율주행스튜디오</h4>
+          <p>4F</p>
+          <p>소융대 학생들의 모임장소</p>
+        </article>
 
-        <section>
+        <article class="place">
+          <h4>무한상상실</h4>
+          <p>4F</p>
+          <p>적당한 소음의 공부 공간</p>
+        </article>
+        
+      </div>
 
-          <h4>편의시설 및 공간 목록</h4>
+    </aside>
 
-          <article>
-
-            <h5>4F 자율주행스튜디오</h5>
-
-            <figure>
-              <!-- <img src="" alt="자율주행스튜디오 사진"> -->
-            </figure>
-
-            <p>
-              소융대 학생들의 모임장소
-            </p>
-
-          </article>
-
-          <hr>
-
-          <article>
-
-            <h5>무한상상실</h5>
-
-            <figure>
-              <!-- <img src="" alt="무한상상실 사진"> -->
-            </figure>
-
-            <p>
-              무상실 설명
-            </p>
-
-          </article>
-
-        </section>
-
-      </aside>
 
     </section>
+
+    
 
   </main>
 
