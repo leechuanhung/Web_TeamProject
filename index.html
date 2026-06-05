@@ -3,54 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>국민대학교 편의시설과 공간</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 </head>
 
 <body>
 
-  <!-- 공통 상단 영역 -->
+  <!-- 공통 헤더 -->
   <header>
 
     <h1>
       <a href="index.html">
         <!-- <img src="" alt="로고"> -->
-        국민대학교 편의시설과 공간
       </a>
     </h1>
 
     <nav>
       <ul>
         <li><a href="index.html">메인 페이지</a></li>
-        <li><a href="food.html">메인 페이지2(?)</a></li>
+        <li><a href="restaurants.html">주변 맛집</a></li>
         <li><a href="team.html">팀원 소개</a></li>
         <li><a href="game.html">게임</a></li>
         <li><a href="form.html">폼</a></li>
       </ul>
     </nav>
 
-    <figure>
-      <img src="" alt="상단 이미지">
-    </figure>
+    
 
   </header>
 
   <!-- 메인 페이지 -->
   <main>
 
-    <section>
+    <div class="explain">
 
-      <h2>국민대학교 편의시설과 공간 소개</h2>
+      <img class="explain-koomin" src="./images/쿠민1.png">
 
-    </section>
+      <div class="explain-text">
+        <h2>국민대 편의시설을 한눈에!</h2>
+        <p>장소 추가 또는 건의사항이 있다면 문의해주세요</p>
+      </div>
+    </div>
+
 
     <!-- 지도 -->
     <section>
 
-      <h2>캠퍼스 지도</h2>
-
       <!-- 지도 이미지 -->
-      <figure>
-        <!-- <img src="" alt="캠퍼스 지도"> -->
-      </figure>
+      <img class="map" src="./images/map.png" alt="캠퍼스 지도" style="background-size: cover;">
 
       <!-- 마커 -->
       <button type="button">
@@ -60,10 +60,10 @@
       <!-- 마커 클릭 시 열릴 장소/편의시설 정보 창 -->
       <aside>
 
-        <header>
+        <div>
           <h3>미래관</h3>
           <button type="button">닫기</button>
-        </header>
+        </div>
 
         <figure>
             <!-- <img src="" alt="미래관 사진"> -->
