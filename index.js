@@ -28,7 +28,7 @@ mapPlaces.forEach((mapPlace) => {
 
   marker.addEventListener("click", () => {
     closeAllDetails();
-    details.style.display = "block";
+    details.style.display = "flex";
   });
 
   closeButton.addEventListener("click", () => {
