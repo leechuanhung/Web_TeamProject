@@ -3,8 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <title>게임 페이지</title>
+
+        <style>
+            * { margin:0; padding:0; box-sizing:border-box; }
+                body { background:#0a0a14; display:flex; flex-direction:column; align-items:center;
+                        justify-content:center; min-height:100vh; font-family:monospace; }
+            canvas { display:block; border:1px solid #222; }
+            #ui { display:flex; justify-content:space-between; width:560px; margin-top:10px;
+                    font-size:13px; color:#556; }
+            #wrap { position:relative; display:flex; align-items:center; justify-content:center; }
+            #msg { position:absolute; color:#fff; font-size:20px; pointer-events:none;
+                    text-align:center; text-shadow:0 0 12px #f90, 0 2px 4px #000; }
+    
+        </style>
     </head>
     <body>
-        game test
+        <div id="wrap">
+            <canvas id="cv" width="560" height="360"></canvas>
+            <div id="msg"></div>
+        </div>
+        <div id="ui">
+            <span>← → : 이동 &nbsp;|&nbsp; Space/↑ : 점프</span>
+            <span>점수: <b id="scoreEl">0</b></span>
+        </div>
+
+        <script src="gameScript.js"></script>
     </body>
 </html>
