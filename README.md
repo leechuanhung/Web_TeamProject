@@ -7,7 +7,7 @@
 이천홍 : game 페이지 & js
 
       ㄴ 확인했습니다(최찬영)
-      
+
 
 <br>
 
@@ -29,3 +29,8 @@ https://mozdevs.github.io/html5-games-workshop/platformer/
       </div>
 </div>
 ```
+
+
+고소영 : CSS & PPT
+내일부터 PPT 만들려고 해요
+CSS 수정 주신거 말고 CSS에서 더 추가할 거 있으면 해보도록 할께요... ㅇ(-(!!
