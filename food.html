@@ -1,10 +1,451 @@
 <!DOCTYPE html>
-<html lang=ko>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">    
-  <title>메인 페이지</title>
+  <meta charset="UTF-8">
+  <title>국민대와 성신여대 근처 맛집</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+
+  <style>
+    .food-section {
+      width: 82%;
+      max-width: 1500px;
+      margin: 70px auto 120px;
+    }
+
+    .food-map-block {
+      margin-bottom: 110px;
+    }
+
+    .food-map-title {
+      margin-bottom: 24px;
+      font-size: 32px;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .food-map-title.kookmin {
+      color: #1f5f9e;
+    }
+
+    .food-map-title.sungshin {
+      color: #b33468;
+    }
+
+    .food-map-elements {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: visible;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .food-map {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .food-place {
+      position: absolute;
+      width: 32px;
+      height: 47px;
+    }
+
+    .food-place .map-marker {
+      left: 0;
+      top: 0;
+    }
+
+    .food-place:hover,
+    .food-place:focus-within {
+      z-index: 30;
+    }
+
+    .food-details {
+      display: none;
+      position: absolute;
+      left: 38px;
+      top: -14px;
+      width: 260px;
+      padding: 16px 18px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+      z-index: 20;
+    }
+
+    .food-place:hover .food-details,
+    .food-place:focus-within .food-details {
+      display: block;
+    }
+
+    .food-details h4 {
+      margin-bottom: 10px;
+      color: var(--color-font);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .food-details p {
+      margin: 5px 0;
+      color: var(--color-font);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
 </head>
+
 <body>
-  test
+
+  <!-- 공통 헤더 -->
+  <header>
+
+    <h1>
+      <a href="index.html">
+        <!-- <img src="" alt="로고"> -->
+      </a>
+    </h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">메인 페이지</a></li>
+        <li><a href="food.html">주변 맛집</a></li>
+        <li><a href="team.html">팀원 소개</a></li>
+        <li><a href="game.html">게임</a></li>
+        <li><a href="form.html">폼</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <div class="explain">
+      <img class="explain-img" src="./images/쿠민3.png" alt="쿠민이">
+
+      <div class="explain-text">
+        <h2>학교 근처 맛집을 한눈에!</h2>
+        <p>국민대학교와 성신여자대학교 근처 맛집을 지도에서 확인해보세요</p>
+      </div>
+    </div>
+
+    <section class="food-section">
+
+      <div class="food-map-block">
+        <h3 class="food-map-title kookmin">국민대학교 근처 맛집</h3>
+
+        <div class="food-map-elements">
+          <img class="food-map" src="./images/kfood_map.png" alt="국민대학교 근처 맛집 지도">
+
+          <div class="food-place" style="left: 55.7%; top: 42.1%;">
+            <button class="map-marker" type="button" title="포틀리에">
+              <img src="./images/map_marker.png" alt="포틀리에 위치">
+            </button>
+            <aside class="food-details">
+              <h4>포틀리에</h4>
+              <p>유형: 브런치 카페</p>
+              <p>빵, 샌드위치, 커피를 함께 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 67.7%; top: 43.8%;">
+            <button class="map-marker" type="button" title="도이칠란드박">
+              <img src="./images/map_marker.png" alt="도이칠란드박 위치">
+            </button>
+            <aside class="food-details">
+              <h4>도이칠란드박</h4>
+              <p>유형: 양식 맛집</p>
+              <p>친구들과 점심이나 저녁을 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 73.4%; top: 40.5%;">
+            <button class="map-marker" type="button" title="연꽃차 정릉시장점">
+              <img src="./images/map_marker.png" alt="연꽃차 정릉시장점 위치">
+            </button>
+            <aside class="food-details">
+              <h4>연꽃차 정릉시장점</h4>
+              <p>유형: 차 전문 카페</p>
+              <p>식사 후 가볍게 음료를 마시기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 79.6%; top: 44.0%;">
+            <button class="map-marker" type="button" title="도꼬돈카츠">
+              <img src="./images/map_marker.png" alt="도꼬돈카츠 위치">
+            </button>
+            <aside class="food-details">
+              <h4>도꼬돈카츠</h4>
+              <p>유형: 돈카츠 맛집</p>
+              <p>바삭한 돈카츠로 든든하게 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 84.9%; top: 49.4%;">
+            <button class="map-marker" type="button" title="파리바게뜨">
+              <img src="./images/map_marker.png" alt="파리바게뜨 위치">
+            </button>
+            <aside class="food-details">
+              <h4>파리바게뜨 정릉점</h4>
+              <p>유형: 베이커리 카페</p>
+              <p>간단한 빵이나 음료를 사기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 20.2%; top: 88.7%;">
+            <button class="map-marker" type="button" title="르한스">
+              <img src="./images/map_marker.png" alt="르한스 위치">
+            </button>
+            <aside class="food-details">
+              <h4>르한스</h4>
+              <p>유형: 카페</p>
+              <p>학교 근처에서 쉬어가기 좋은 카페입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 13.4%; top: 31.5%;">
+            <button class="map-marker" type="button" title="국민상회">
+              <img src="./images/map_marker.png" alt="국민상회 위치">
+            </button>
+            <aside class="food-details">
+              <h4>국민상회</h4>
+              <p>유형: 분식 맛집</p>
+              <p>떡볶이와 분식 메뉴를 가볍게 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 41.2%; top: 44.8%;">
+            <button class="map-marker" type="button" title="고씨네 카레">
+              <img src="./images/map_marker.png" alt="고씨네 카레 위치">
+            </button>
+            <aside class="food-details">
+              <h4>고씨네 카레</h4>
+              <p>유형: 카레 맛집</p>
+              <p>카레 한 그릇으로 든든하게 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 58.3%; top: 55.8%;">
+            <button class="map-marker" type="button" title="두 번째 이야기">
+              <img src="./images/map_marker.png" alt="두 번째 이야기 위치">
+            </button>
+            <aside class="food-details">
+              <h4>두 번째 이야기</h4>
+              <p>유형: 닭갈비 맛집</p>
+              <p>매콤한 닭갈비로 친구들과 식사하기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 73.1%; top: 7.5%;">
+            <button class="map-marker" type="button" title="기차순대국">
+              <img src="./images/map_marker.png" alt="기차순대국 위치">
+            </button>
+            <aside class="food-details">
+              <h4>기차순대국</h4>
+              <p>유형: 순대국 맛집</p>
+              <p>따뜻한 국밥으로 든든하게 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 16.8%; top: 34.7%;">
+            <button class="map-marker" type="button" title="풍년포차">
+              <img src="./images/map_marker.png" alt="풍년포차 위치">
+            </button>
+            <aside class="food-details">
+              <h4>풍년포차</h4>
+              <p>유형: 포차 맛집</p>
+              <p>국민대 지하세계 쪽에서 친구들과 가기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 18.8%; top: 37.0%;">
+            <button class="map-marker" type="button" title="현주네포차">
+              <img src="./images/map_marker.png" alt="현주네포차 위치">
+            </button>
+            <aside class="food-details">
+              <h4>현주네포차</h4>
+              <p>유형: 포차 맛집</p>
+              <p>간단한 안주와 식사를 함께 하기 좋은 국민대 근처 맛집입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 61.8%; top: 47.8%;">
+            <button class="map-marker" type="button" title="카페 로마 정릉">
+              <img src="./images/map_marker.png" alt="카페 로마 정릉 위치">
+            </button>
+            <aside class="food-details">
+              <h4>카페 로마 정릉</h4>
+              <p>유형: 카페</p>
+              <p>커피와 간단한 메뉴를 먹으며 쉬기 좋은 카페입니다.</p>
+            </aside>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-map-block">
+        <h3 class="food-map-title sungshin">성신여대 근처 맛집</h3>
+
+        <div class="food-map-elements">
+          <img class="food-map" src="./images/sfood_map.png" alt="성신여대 근처 맛집 지도">
+
+          <div class="food-place" style="left: 18.6%; top: 40.6%;">
+            <button class="map-marker" type="button" title="놀란">
+              <img src="./images/map_marker.png" alt="놀란 위치">
+            </button>
+            <aside class="food-details">
+              <h4>놀란</h4>
+              <p>유형: 식사 맛집</p>
+              <p>성신여대입구역에서 걸어가기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 40.1%; top: 19.0%;">
+            <button class="map-marker" type="button" title="새김돈 성신여대점">
+              <img src="./images/map_marker.png" alt="새김돈 성신여대점 위치">
+            </button>
+            <aside class="food-details">
+              <h4>새김돈 성신여대점</h4>
+              <p>유형: 고기 맛집</p>
+              <p>든든하게 식사하기 좋은 고기집입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 46.0%; top: 24.6%;">
+            <button class="map-marker" type="button" title="코지밀">
+              <img src="./images/map_marker.png" alt="코지밀 위치">
+            </button>
+            <aside class="food-details">
+              <h4>코지밀</h4>
+              <p>유형: 식사 맛집</p>
+              <p>친구와 약속 장소로 잡기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 44.5%; top: 29.9%;">
+            <button class="map-marker" type="button" title="스시진">
+              <img src="./images/map_marker.png" alt="스시진 위치">
+            </button>
+            <aside class="food-details">
+              <h4>스시진</h4>
+              <p>유형: 초밥 맛집</p>
+              <p>초밥을 먹고 싶을 때 들르기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 44.6%; top: 36.6%;">
+            <button class="map-marker" type="button" title="호로록치">
+              <img src="./images/map_marker.png" alt="호로록치 위치">
+            </button>
+            <aside class="food-details">
+              <h4>호로록치</h4>
+              <p>유형: 식사 맛집</p>
+              <p>가볍게 한 끼 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 40.8%; top: 41.7%;">
+            <button class="map-marker" type="button" title="렌테이">
+              <img src="./images/map_marker.png" alt="렌테이 위치">
+            </button>
+            <aside class="food-details">
+              <h4>렌테이</h4>
+              <p>유형: 일식 맛집</p>
+              <p>점심이나 저녁 식사로 들르기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 40.9%; top: 51.4%;">
+            <button class="map-marker" type="button" title="제제집">
+              <img src="./images/map_marker.png" alt="제제집 위치">
+            </button>
+            <aside class="food-details">
+              <h4>제제집</h4>
+              <p>유형: 식사 맛집</p>
+              <p>친구와 편하게 식사하기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 44.6%; top: 60.2%;">
+            <button class="map-marker" type="button" title="스타벅스">
+              <img src="./images/map_marker.png" alt="스타벅스 위치">
+            </button>
+            <aside class="food-details">
+              <h4>스타벅스</h4>
+              <p>유형: 카페</p>
+              <p>식사 후 커피를 마시거나 쉬기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 48.1%; top: 60.0%;">
+            <button class="map-marker" type="button" title="라라면가">
+              <img src="./images/map_marker.png" alt="라라면가 위치">
+            </button>
+            <aside class="food-details">
+              <h4>라라면가</h4>
+              <p>유형: 중식 맛집</p>
+              <p>면 요리와 중식 메뉴를 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 42.3%; top: 68.8%;">
+            <button class="map-marker" type="button" title="카페몰">
+              <img src="./images/map_marker.png" alt="카페몰 위치">
+            </button>
+            <aside class="food-details">
+              <h4>카페몰</h4>
+              <p>유형: 카페</p>
+              <p>디저트나 음료를 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 44.8%; top: 63.7%;">
+            <button class="map-marker" type="button" title="동경산책">
+              <img src="./images/map_marker.png" alt="동경산책 위치">
+            </button>
+            <aside class="food-details">
+              <h4>동경산책</h4>
+              <p>유형: 일식 맛집</p>
+              <p>성신여대 근처에서 일식 메뉴를 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 51.2%; top: 69.8%;">
+            <button class="map-marker" type="button" title="스파츠">
+              <img src="./images/map_marker.png" alt="스파츠 위치">
+            </button>
+            <aside class="food-details">
+              <h4>스파츠</h4>
+              <p>유형: 디저트 카페</p>
+              <p>디저트와 커피를 함께 즐기기 좋은 카페입니다.</p>
+            </aside>
+          </div>
+
+          <div class="food-place" style="left: 56.2%; top: 79.2%;">
+            <button class="map-marker" type="button" title="팔백집">
+              <img src="./images/map_marker.png" alt="팔백집 위치">
+            </button>
+            <aside class="food-details">
+              <h4>팔백집</h4>
+              <p>유형: 식사 맛집</p>
+              <p>성신여대 아래쪽 골목에서 든든하게 먹기 좋은 곳입니다.</p>
+            </aside>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      웹클 1분반 1조 프로젝트
+    </p>
+  </footer>
+
 </body>
 </html>
