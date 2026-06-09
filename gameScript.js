@@ -2,7 +2,7 @@
 const spriteImg = new Image();
 let spriteReady = false;
 spriteImg.onload = () => { spriteReady = true; };
-spriteImg.src = "/images/록금이_뛰는_이미지.png"
+spriteImg.src = "./images/록금이_뛰는_이미지.png"
 const FRAME_W = 768, FRAME_H = 1024, FRAMES = 2;
 const DRAW_W  = 72,  DRAW_H  = Math.round(72 * 614 / 356);
 
