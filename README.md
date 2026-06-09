@@ -30,6 +30,8 @@ https://mozdevs.github.io/html5-games-workshop/platformer/
 </div>
 ```
 
+이미지들도 업뎃 했으니 다운받아주세요
+
 
 고소영 : CSS & PPT
 내일부터 PPT 만들려고 해요
