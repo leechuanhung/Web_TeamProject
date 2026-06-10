@@ -112,7 +112,47 @@ figure {
 }
 /*---------------------------------------------------------------------------*/ 
 
+/* -------추가한 부분 main 제목부분, 섹션과 하위 div, 프로필 이미지---------- */
 
+.main-title {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+    font-size: 45px;
+    color: var(--color-font);
+}
+
+.main-subtitle {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: var(--color-font);
+}
+
+section {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+section > div {
+    display: flex;
+    gap: 30px;
+    font-size: 17px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; 
+    box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+}
+
+/* ---------------------------------------------------------------------- */
 
 /* -------------------------------지도 클래스--------------------------- */
 .map {
