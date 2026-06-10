@@ -298,3 +298,108 @@ section > div {
     margin: 4px 0;
     font-size: 16px;
 }
+
+/* =====================================================
+   모바일 반응형 (768px 이하)
+   ===================================================== */
+@media (max-width: 768px) {
+
+    header {
+        height: 120px;
+        padding: 16px 20px;
+        font-size: 40px;
+    }
+
+    header.scrolled {
+        height: 52px;
+    }
+
+    header nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul {
+        font-size: 13px;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .explain {
+        margin: 140px auto 60px;
+        padding: 0 20px;
+        gap: 24px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .explain-img {
+        width: 100px;
+    }
+
+    .explain-text h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .explain-text p {
+        font-size: 14px;
+    }
+
+    .map-section {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .map-elements {
+        width: 700px;   
+        min-width: 700px;
+        margin: 20px 0 0 0;
+    }
+
+    .details {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: calc(100vw - 32px); 
+        max-width: 360px;
+        max-height: 70vh;
+    }
+
+    .details-header {
+        padding: 14px 18px;
+    }
+
+    .details-header h3 {
+        font-size: 18px;
+    }
+
+    .close-details {
+        font-size: 15px;
+    }
+
+    .details-body {
+        padding: 8px 18px 16px;
+    }
+
+    .place {
+        padding: 14px 0;
+    }
+
+    .place h4 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .place p {
+        font-size: 13px;
+    }
+}
+
