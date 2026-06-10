@@ -81,6 +81,22 @@ figure {
     display: none;
 }
 
+/* ---------------------------푸터 디자인 추가-------------------- */
+
+footer {
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    row-gap: 5px;
+    padding: 15px;
+}
+
+footer p {
+    text-align: center;
+    color: #444;
+}
+/* -------------------------------------------------------------- */
+
 /* ----------------- 이미지와 텍스트 부분 --------------------------*/
 .explain {
     max-width: 1000px;
@@ -110,9 +126,9 @@ figure {
     line-height: 1.8;
     color: var(--color-font);
 }
-/*---------------------------------------------------------------------------*/ 
+/*---------------------------------------------------------------------------*/
 
-/* -------추가한 부분 main 제목부분, 섹션과 하위 div, 프로필 이미지---------- */
+/* ---------- team, form 페이지에 들어가는 요소 부분 추가 ------------- */
 
 .main-title {
     max-width: 800px;
@@ -130,7 +146,7 @@ figure {
 }
 
 section {
-    max-width: 1400px;
+    max-width: 800px;
     margin: 100px auto;
     padding: 0 40px;
     display: flex;
@@ -144,12 +160,131 @@ section > div {
     font-size: 17px;
 }
 
+.section-box {
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 40px;
+    justify-content: flex-start;
+    border: 1px solid var(--color-blue);
+}
+
+.section-box .main-title {
+    margin: 0 0;
+    padding: 60px 0 0 0;
+}
+
+.section-box .main-subtitle {
+    margin: 0 0;
+}
+
+.conditional-question {
+    display: none;
+}
+        
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.options label {
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.options-br {
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.options-br label {
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    margin-right: 10px;
+}
+
+.form-body { background: var(--color-base); }
+
+.essential-star {
+    color: var(--color-point);
+}
+
 .profile-img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%; 
     box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+}
+
+.form-end {
+    max-width: 808px;
+    height: 120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-end {
+    max-width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submitBtn {
+    width: 80px; height: 55px;
+    font-size: 16px;
+    color: #fff;
+    background: var(--color-blue);
+    border-radius: 7px;
+    margin: 15px 2px;
+    justify-content: flex-start;
+    border: 1px solid var(--color-blue);
+}
+
+.submitBtn:hover {
+    width: 84px; height: 59px;
+    font-size: 17px;
+    margin: 13px 0;
+}
+
+.resetBtn {
+    width: 80px; height: 55px;
+    font-size: 16px;
+    color: var(--color-blue);
+    background: #fff;
+    border-radius: 7px;
+    margin: 15px 2px;
+    justify-content: flex-start;
+    border: 1px solid var(--color-blue);
+}
+
+.resetBtn:hover {
+    width: 84px; height: 59px;
+    font-size: 17px;
+    margin: 13px 0;
+}
+
+.topBtn {
+    width: 55px; height: 55px;
+    font-size: 16px;
+    color: var(--color-blue);
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 1px solid var(--color-blue);
+}
+
+.topBtn:hover {
+    background: #ddd;
 }
 
 /* ---------------------------------------------------------------------- */
