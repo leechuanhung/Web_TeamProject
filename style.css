@@ -297,6 +297,7 @@ label {
 }
 
 .map-section {
+    max-widt: 1400px;
     margin-top: 40px;
 }
 
