@@ -130,7 +130,7 @@ figure {
 }
 
 section {
-    max-width: 800px;
+    max-width: 1400px;
     margin: 100px auto;
     padding: 0 40px;
     display: flex;
@@ -167,8 +167,8 @@ section > div {
 
 .map-elements {
     position: relative;
-    width: 80%;
-    max-width: 1500px;
+    width: 100%;
+    max-width: none;
     margin: 40px auto 0;
 }
 
@@ -402,4 +402,3 @@ section > div {
         font-size: 13px;
     }
 }
-
