@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>웹사이트 만족도 조사</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts/index.js" defer></script>
+    </head>
+    <body class="form-body">
+        <header>
+            <h1>
+                <a href="index.html">
+                    <!-- <img src="" alt="로고"> -->
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">메인 페이지</a></li>
+                    <li><a href="food.html">주변 맛집</a></li>
+                    <li><a href="team.html">팀원 소개</a></li>
+                    <li><a href="game.html">게임</a></li>
+                    <li><a href="proposal.html">정보 추가 건의</a></li>
+                    <li><a href="form.html">만족도 조사</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="section-box">
+                <h1 class="main-title">웹사이트 만족도 조사</h1>
+                <p class="main-subtitle">더 나은 웹사이트를 위해 만족도 조사에 참여해주세요!</p>
+                <hr>
+                <div class="essential-star">* 표시는 필수 질문입니다.</div>
+                <div style="height: 5px;"></div>
+            </section>
+            
+            <form action="#" method="post">
+                <section class="section-box">
+                    <label>어떤 정보를 찾기 위해 저희 웹사이트를 방문하셨나요?
+                        <p class="essential-star" style="display: inline-block;">*</p>
+                    </label>
+
+                    <div class="options">
+                        <label><input type="radio" name="purpose" value="편의시설" required> 편의시설 검색</label>
+                        <label><input type="radio" name="purpose" value="맛집"> 맛집 등 음식점 검색</label>
+                        <label><input type="radio" name="purpose" value="gamePlay"> 미니게임 플레이</label>
+                        <label><input type="radio" name="purpose" value="etc"> 기타</label>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <label>제공된 정보가 유익하고 충분했나요?</label>
+
+                    <div class="options">
+                        <label><input type="radio" name="information" value="5score"> 매우 그렇다</label>
+                        <label><input type="radio" name="information" value="4score"> 그렇다</label>
+                        <label><input type="radio" name="information" value="3score"> 보통이다</label>
+                        <label><input type="radio" name="information" value="2score"> 그렇지 않다</label>
+                        <label><input type="radio" name="information" value="1score"> 매우 그렇지 않다</label>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <label>원하시는 정보를 찾기 손쉬웠나요?</label>
+
+                    <div class="options">
+                        <label><input type="radio" name="convenient" value="5score"> 매우 그렇다</label>
+                        <label><input type="radio" name="convenient" value="4score"> 그렇다</label>
+                        <label><input type="radio" name="convenient" value="3score"> 보통이다</label>
+                        <label><input type="radio" name="convenient" value="2score"> 그렇지 않다</label>
+                        <label><input type="radio" name="convenient" value="1score"> 매우 그렇지 않다</label>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <label>미니게임은 만족스러우셨나요?</label>
+
+                    <div class="options-br">
+                        <label><input type="radio" name="game" value="5score"> 매우 그렇다</label>
+                        <label><input type="radio" name="game" value="4score"> 그렇다</label>
+                        <label><input type="radio" name="game" value="3score"> 보통이다</label>
+                        <label><input type="radio" name="game" value="2score"> 그렇지 않다</label>
+                        <label><input type="radio" name="game" value="1score"> 매우 그렇지 않다</label>
+                        <label><input type="radio" name="game" value="non"> 해보지 않았다</label>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <label>사이트의 전체적인 만족도를 알려주세요.
+                        <p class="essential-star" style="display: inline-block;">*</p>
+                    </label>
+
+                    <div class="options">
+                        <label><input type="radio" name="satisfaction" value="매우만족" required> 매우 만족</label>
+                        <label><input type="radio" name="satisfaction" value="만족"> 만족</label>
+                        <label><input type="radio" name="satisfaction" value="보통"> 보통</label>
+                        <label><input type="radio" name="satisfaction" value="불만족"> 불만족</label>
+                        <label><input type="radio" name="satisfaction" value="매우불만족"> 매우 불만족</label>
+                    </div>
+                </section>
+
+                <section id="positiveGroup" class="section-box conditional-question">
+                    <label>마음에 들었던 점을 모두 골라주세요.</label>
+
+                    <div class="options-br">
+                        <label><input type="checkbox" name="positive_reason" value="infomation">
+                            정보가 유용하다</label>
+                        <label><input type="checkbox" name="positive_reason" value="intuitive">
+                            사이트가 직관적이라서 원하는 정보를 찾기 쉽다</label>
+                        <label><input type="checkbox" name="positive_reason" value="game">
+                            미니게임이 재미있다</label>
+                        <label><input type="checkbox" name="positive_reason" value="design">
+                            디자인이 깔끔해 마음에 든다</label>
+                        <label><input type="checkbox" name="positive_reason" value="other">
+                            기타</label>
+                    </div>
+                </section>
+
+                <section id="negativeGroup" class="section-box conditional-question">
+                    <label>아쉬웠던 점을 모두 골라주세요.</label>
+
+                    <div class="options-br">
+                        <label><input type="checkbox" name="negative_reason" value="lackInfomation">
+                            정보가 빈약하거나 부정확하다</label>
+                        <label><input type="checkbox" name="negative_reason" value="notIntuitive">
+                            기능이 불명확해 원하는 정보를 찾기 어렵다</label>
+                        <label><input type="checkbox" name="negative_reason" value="gameError">
+                            미니게임이 재미없거나 오류가 있다</label>
+                        <label><input type="checkbox" name="negative_reason" value="noReadability">
+                            디자인의 가독성이 떨어진다</label>
+                        <label><input type="checkbox" name="negative_reason" value="otherBad">
+                            기타</label>
+                    </div>
+                </section>
+
+                <section class="section-box">
+                    <label>향후 추가되었으면 하는 기능이나 정보가 있다면 적어주세요.</label>
+                    <textarea id="request" name="request" rows="7" cols="50"
+                        placeholder="Ex. 사용자 리뷰/별점 기능, 여성용품 비치된 화장실 정보"
+                        style="resize: none;"></textarea>
+                </section>
+
+                <section class="section-box">
+                    <label>하고싶은 말이나 제언이 있다면 자유롭게 적어주세요.</label>
+                    <textarea id="etc" name="etc" rows="7" cols="50" placeholder="응원의 말도 좋아요"
+                        style="resize: none;" ></textarea>
+                </section>
+
+                <div class="form-end">
+                    <!-- js로 제출하시겠습니까? 확인 후 제출되도록 -->
+                    <button class="submitBtn" type="submit">제출</button>
+                    <!-- js로 초기화하시겠습니까? 확인 후 초기화 -->
+                    <button class="resetBtn" type="reset">초기화</button>
+                </div>
+            </form>
+
+            <div class="page-end">
+                <button class="topBtn">top</button>
+            </div>
+        </main>
+        
+        <footer>
+            <hr>
+            <div style="height: 5px;"></div>
+            <p>웹클라이언트컴퓨팅 1분반 1조 팀프로젝트</p>
+        </footer>
+
+        <script src="scripts/form.js"></script>
+    </body>
+</html>

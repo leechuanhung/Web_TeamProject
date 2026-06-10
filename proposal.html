@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>정보 추가 건의 폼</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts/index.js" defer></script>
+    </head>
+    <body class="form-body">
+        <header>
+            <h1>
+                <a href="index.html">
+                    <!-- <img src="" alt="로고"> -->
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">메인 페이지</a></li>
+                    <li><a href="food.html">주변 맛집</a></li>
+                    <li><a href="team.html">팀원 소개</a></li>
+                    <li><a href="game.html">게임</a></li>
+                    <li><a href="proposal.html">정보 추가 건의</a></li>
+                    <li><a href="form.html">만족도 조사</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="section-box">
+                <h1 class="main-title">시설 정보 추가 건의</h1>
+                <p class="main-subtitle">
+                    해당 웹사이트에 추가되었으면 하는 시설이나 장소에 대한 정보가 있으신가요?
+                    <br>
+                    이 폼을 이용해 건의해주시면 더욱 알차고 유용한 웹사이트가 되는 데 큰 도움이 됩니다!
+                </p>
+                <hr>
+                <div class="essential-star">* 표시는 필수 질문입니다.</div>
+                <div style="height: 5px;"></div>
+            </section>
+
+            <form action="#" method="post">
+                <section class="section-box">
+                    <label>어떤 유형의 장소인가요?
+                        <p class="essential-star" style="display: inline-block;">*</p>
+                    </label>
+
+                    <div class="options">
+                        <label><input type="radio" name="division" value="편의" required> 편의시설</label>
+                        <label><input type="radio" name="division" value="맛집"> 맛집/카페</label>
+                        <label><input type="radio" name="division" value="study"> 스터디/공부</label>
+                        <label><input type="radio" name="division" value="etc"> 기타</label>
+                    </div>
+                </section>
+                
+                <section class="section-box">
+                    <label for="name">장소의 이름이 무엇인가요?
+                        <p class="essential-star" style="display: inline-block;">*</p>
+                    </label>
+                    <input type="text" id="name" name="name"
+                        placeholder="Ex. 카페 나무, 무한상상실" required>
+                </section>
+
+                <section class="section-box">
+                    <label for="location">구체적인 위치를 알려주세요.
+                        <p class="essential-star" style="display: inline-block;">*</p>
+                    </label>
+                    <textarea id="location" name="location" rows="3" cols="50"
+                            placeholder="주소, 호수 등의 구체적인 위치를 적어주세요."
+                            style="resize: none;" required></textarea>
+                </section>
+
+                <section class="section-box">
+                    <label for="pReason">추천하는 이유가 있나요?</label>
+                    <textarea id="pReason" name="pReason" rows="5" cols="50"
+                            placeholder="Ex. 라떼가 맛있어요. 적당히 조용해서 공부하기 좋아요."
+                            style="resize: none;"></textarea>
+                </section>
+
+                <div class="form-end">
+                    <!-- js로 제출하시겠습니까? 확인 후 제출되도록 -->
+                    <button class="submitBtn" type="submit">제출</button>
+                    <!-- js로 초기화하시겠습니까? 확인 후 초기화 -->
+                    <button class="resetBtn" type="reset">초기화</button>
+                </div>
+            </form>
+        </main>
+        
+        <footer>
+            <hr>
+            <div style="height: 5px;"></div>
+            <p>웹클라이언트컴퓨팅 1분반 1조 팀프로젝트</p>
+        </footer>
+
+        <script src="scripts/form.js"></script>
+    </body>
+</html>
