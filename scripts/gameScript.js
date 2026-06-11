@@ -50,7 +50,7 @@ const QUIZ_LIST = [
   },
   {
     q: "Q. 복지관 3층에 위치한 식당의 이름은?", 
-    answers: ["학생 식당", "기숙사 식당"], // <-- [수정] 1층 교직원 식당과 혼동되지 않게 오답 변경!
+    answers: ["학생 식당", "기숙사 식당"], 
     correct: "학생 식당" 
   },
   {
@@ -110,7 +110,7 @@ const STARS=Array.from({length:55},()=>({
 }));
 const keys={};
 
-/* ── 키 입력 이벤트 ── */
+/* ── 키보드 입력 이벤트 ── */
 document.addEventListener('keydown', e=>{
   if([' ','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)) e.preventDefault();
   if(keys[e.key]) return;
@@ -132,6 +132,66 @@ document.addEventListener('keydown', e=>{
   }
 });
 document.addEventListener('keyup', e=>{ keys[e.key]=false; });
+
+
+/* ── [신규] 모바일 터치 및 마우스 클릭 이벤트 시스템 ── */
+cv.addEventListener('pointerdown', e => {
+  e.preventDefault();
+
+  // 1. 대기 및 사망 화면에서 누르면 시작
+  if(state === 'ready' || state === 'dead') {
+    startGame();
+    return;
+  }
+
+  // 캔버스 크기 대비 실제 좌표 계산
+  const rect = cv.getBoundingClientRect();
+  const clickX = ((e.clientX - rect.left) / rect.width) * W;
+  const clickY = ((e.clientY - rect.top) / rect.height) * H;
+
+  // 2. 퀴즈 활성화 상태일 때 박스 터치 판정
+  if(quizState === 'active') {
+    // 위쪽 정답 박스 범위 (X: 140~420, Y: 40~85)
+    if(clickX >= 140 && clickX <= 420 && clickY >= 40 && clickY <= 85) {
+      handleQuizAnswer('up');
+    }
+    // 아래쪽 정답 박스 범위 (X: 140~420, Y: 275~320)
+    else if(clickX >= 140 && clickX <= 420 && clickY >= 275 && clickY <= 320) {
+      handleQuizAnswer('down');
+    }
+    return;
+  }
+
+  // 3. 일반 게임 플레이 중 터치 이동 및 점프
+  if(clickY < H * 0.3) {
+    // 화면의 상단 30% 영역을 터치하면 점프 실행
+    if(ch.onGround) {
+      ch.vy = -0.026;
+      ch.onGround = false;
+    }
+  } else {
+    // 하단 영역 좌우 터치 이동
+    if(clickX < W / 2) {
+      keys['ArrowLeft'] = true;
+      keys['ArrowRight'] = false;
+    } else {
+      keys['ArrowRight'] = true;
+      keys['ArrowLeft'] = false;
+    }
+  }
+});
+
+// 손가락을 떼거나 마우스를 뗐을 때 이동 멈춤
+cv.addEventListener('pointerup', e => {
+  e.preventDefault();
+  keys['ArrowLeft'] = false;
+  keys['ArrowRight'] = false;
+});
+cv.addEventListener('pointerleave', e => {
+  keys['ArrowLeft'] = false;
+  keys['ArrowRight'] = false;
+});
+
 
 /* ── 퀴즈 정답 선택 처리 함수 ── */
 function handleQuizAnswer(choice) {
@@ -283,6 +343,7 @@ function drawQuizUI() {
   ctx.textBaseline = "middle";
   ctx.fillText(currentQuiz.q, W/2, H/2);
 
+  // [위쪽 선택 박스] 범위: X(140 ~ 420), Y(40 ~ 85)
   ctx.fillStyle = "rgba(20, 40, 80, 0.9)";
   ctx.strokeStyle = "#00ffcc";
   ctx.lineWidth = 2;
@@ -293,6 +354,7 @@ function drawQuizUI() {
   ctx.font = "bold 14px sans-serif";
   ctx.fillText("▲ [W 키 / 위 방향키] " + currentQuiz.up, W/2, 62);
 
+  // [아래쪽 선택 박스] 범위: X(140 ~ 420), Y(275 ~ 320)
   ctx.fillStyle = "rgba(20, 40, 80, 0.9)";
   ctx.strokeStyle = "#ffbb00";
   ctx.lineWidth = 2;
@@ -330,7 +392,7 @@ function triggerDeath(){
   ch.dead=true; state='dead';
   setTimeout(()=>{
     document.getElementById('msg').innerHTML=
-      `GAME OVER<br><span style="font-size:14px;color:#fa0">점수: ${score} &nbsp;|&nbsp; 아무 키나 눌러 재시작</span>`;
+      `GAME OVER<br><span style="font-size:14px;color:#fa0">점수: ${score} &nbsp;|&nbsp; 아무 키나 화면 터치 시 재시작</span>`;
   },500);
 }
 
@@ -438,4 +500,4 @@ function draw(){
 }
 
 (function loop(){ update(); draw(); requestAnimationFrame(loop); })();
-document.getElementById('msg').innerHTML='🏃 록금이 RUNNER<br><span style="font-size:13px;color:#fa0">아무 키나 눌러 시작</span>';
+document.getElementById('msg').innerHTML='🏃 록금이 RUNNER<br><span style="font-size:13px;color:#fa0">아무 키 또는 터치 시 시작</span>';
